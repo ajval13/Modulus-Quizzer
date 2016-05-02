@@ -18,8 +18,8 @@ public class ModuloQuizzer
 		    	Scanner userInput1 = new Scanner (System.in);		    	
 		    	if(i==3)
 		    		{
-		    	    int number = (int)(Math.random()*15)+1;
-		    	    int number2 = (int)(Math.random()*50)+15;
+		    	    int number = (int)(Math.random()*25)+1;
+		    	    int number2 = (int)(Math.random()*50)+25;
 		            System.out.println("What is " + number + " % " + number2 + " = ?");
 		            int guess = userInput.nextInt();
 		    	    if (number % number2 == guess)
@@ -29,31 +29,31 @@ public class ModuloQuizzer
 		    		    }
 		    	    else if (number % number2 !=guess)
 		    		    {
-		    		    System.out.println("Wrong, The Correct Answer is " + number % number2);
+		    		    System.out.println("Wrong, The Correct Answer is " + (number % number2));
 		    		    wrong++;
 		    		    }
 		    	    }
-		    	else if (i==1)
+		    	if (i==1)
 		    		{
-		    		int number = (int)(Math.random()*20)+1;
-			        System.out.println("What is " + number + " % " + number + " = ?");
+		    		int num = (int)(Math.random()*20)+1;
+			        System.out.println("What is " + num + " % " + num + " = ?");
 			        int guess2 = userInput.nextInt();
-			        if (number % number == guess2)
+			        if (num % num == guess2)
 			    		{
 			    		 System.out.println("Correct!");	
 			    		 right++;
 			    		}
-			    	else if (number % number !=guess2)
+			    	else if (num % num !=guess2)
 			    		{
-			    		System.out.println("Wrong, The Correct Answer is " + number % number);
+			    		System.out.println("Wrong, The Correct Answer is " + num % num);
 			    		wrong++;
 			    		}
 		    		}
-			    else if (i !=3 && i !=1)
+			    else 
 			        {
 			    	int number1 = (int)(Math.random()*20)+1;
 					int number21 = (int)(Math.random()*15)+1;
-				    System.out.println("What is " + number1 + " % " + number1 + " = ?");
+				    System.out.println("What is " + number1 + " % " + number21 + " = ?");
 				    int guess1 = userInput.nextInt();
 					if (number1 % number21 == guess1)
 					    {
